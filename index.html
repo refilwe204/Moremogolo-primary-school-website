@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Moremogolo Primary schhol</title>
+    <title>Home - Moremogolo Primary School</title>
     <meta
       name="keywords"
       content="moremogolo primary school, Moremogolo Primary School, Moremogolo, Primary School, Schools, Schools in Rustenburg"
     />
+    <link href="/src/css/stylesheet.css" rel="stylesheet" />
     <link href="/Content/About.css" rel="stylesheet" />
     <link href="/Content/Home.css" rel="stylesheet" />
     <link href="/Content/Contact.css" rel="stylesheet" />
@@ -16,11 +17,28 @@
       rel="stylesheet"
     />
     <style>
-        .footer-bg-color {
-          background-color: #191e43;
-          width: 100%;
+      .footer-bg-color {
+        background-color: #191e43;
+        width: 100%;
+      }
+
+      /* Add this style to create the back-and-forth motion */
+      @keyframes moveInOut {
+        0%, 100% {
+          opacity: 0;
+          transform: translateX(-100%); /* Move to the left */
         }
-      </style>     
+        50% {
+          opacity: 1;
+          transform: translateX(0); /* Original position */
+        }
+      }
+
+      /* Apply the animation to the header-info elements */
+      .header-info {
+        animation: moveInOut 5s infinite; /* Adjust the duration as needed */
+      }
+    </style>
     <script
       src="https://kit.fontawesome.com/67d7a24e0d.js"
       crossorigin="anonymous"
@@ -30,13 +48,13 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
-      
     />
   </head>
   <body>
     <header>
       <div class="container mt-2">
         <div class="container d-flex justify-content-around">
+          <!-- Header info without animation -->
           <div class="h6 lato main text-center d-flex my-0">
             <a class="ml-2 main hideParent mr-2" href="/Contact">
               <p>
@@ -50,8 +68,9 @@
             <p class="hideParent pointer">
               <i class="fas fa-phone-alt mr-2" title="+27 73 454 3286"></i>
             </p>
-            <p class="hide">+27 73 454 3286</p>
+            <p class="hide">014 940 6689/079 871 5075</p>
           </div>
+
           <div class="h6 lato main text-center d-flex my-0">
             <p class="hideParent pointer">
               <i
@@ -70,7 +89,9 @@
       >
         <div class="container p-0">
           <a class="navbar-brand" href="/"
-            ><img src="/src/images/moremogolo_primary_school_logo-1.png" style="width: 10rem"
+            ><img
+              src="/src/images/moremogolo_primary_school_logo-1.png"
+              style="width: 10rem"
           /></a>
           <button
             class="navbar-toggler"
@@ -103,7 +124,7 @@
         </div>
       </nav>
     </header>
-   <div class="container-fluid mx-0 p-0">
+    <div class="container-fluid mx-0 p-0">
       <main role="main" class="pb-3">
         <section id="about-school" class="my-5">
           <div class="container">
@@ -164,30 +185,29 @@
     </div>
 
     <footer class="mb-0 p-0 bottom-0 secondary footer-bg-color">
-        <div class="container-fluid mt-2" style="background-color: #191e43;">
-          <div class="row">
-            <div class="col-sm-4 middle">
-              <img
-                src="/src/images/moremogolo_primary_school_logo-1.png"
-                class="mx-auto footerImg img-fluid"
-              />
-              <span class="mt-0">&copy; 2024 By moremogoloprimary</span>
-            </div>
-            <div class="col-sm-8 middle mt-5">
-              <h1
-                class="h1 text-uppercase w-100 text-center"
-                style="border-bottom: 0.313rem solid #eccc8e"
-              >
-              </h1>
-              <div class="d-flex justify-content-around w-100">
-                <p><a class="nav-link secondary" href="/Home">Home</a></p>
-                <p><a class="nav-link secondary" href="/About">About</a></p>
-                <p><a class="nav-link secondary" href="/Contact">Contact</a></p>
-              </div>
+      <div class="container-fluid mt-2" style="background-color: #191e43">
+        <div class="row">
+          <div class="col-sm-4 middle">
+            <img
+              src="/src/images/moremogolo_primary_school_logo-1.png"
+              class="mx-auto footerImg img-fluid"
+            />
+            <span class="mt-0">&copy; 2024 By moremogoloprimary</span>
+          </div>
+          <div class="col-sm-8 middle mt-5">
+            <h1
+              class="h1 text-uppercase w-100 text-center"
+              style="border-bottom: 0.313rem solid #eccc8e"
+            ></h1>
+            <div class="d-flex justify-content-around w-100">
+              <p><a class="nav-link secondary" href="/Home">Home</a></p>
+              <p><a class="nav-link secondary" href="/About">About</a></p>
+              <p><a class="nav-link secondary" href="/Contact">Contact</a></p>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
 
     <script src="/bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
 
