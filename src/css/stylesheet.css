@@ -1,0 +1,24 @@
+/* styles.css */
+
+.footer-bg-color {
+    background-color: #191e43;
+    width: 100%;
+  }
+  
+  /* Add animation styles to create the back-and-forth motion */
+  @keyframes moveInOut {
+    0%, 100% {
+      opacity: 0;
+      transform: translateX(-100%); /* Move to the left */
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0); /* Original position */
+    }
+  }
+  
+  /* Apply the animation to the header-info elements */
+  .header-info {
+    animation: moveInOut 5s infinite; /* Adjust the duration as needed */
+  }
+  
